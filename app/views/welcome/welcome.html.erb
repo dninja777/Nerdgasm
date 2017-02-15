@@ -1,4 +1,7 @@
 <div class="welcome-background">
+    <%= link_to "Create Your Account", new_user_profile_path(current_user) if current_user %>
+    
+    
 <div class="jumbotron">
     <h1 class="text-center">Welcome To NerdGasm</h1>
     <p class="text-center">A Communty Where Nerds Can talk about there favrite things</p>
@@ -9,4 +12,6 @@
      <%=link_to "Sign Up", "#", class: "btn btn-lg btn-primary" %>
      <%=link_to "Log In", "#", class: "btn btn-lg btn-success" %>
 </div>
+
+
 </div>
