@@ -1,5 +1,5 @@
 <div class="welcome-background">
-    <%= link_to "Create Your Account", new_user_profile_path(current_user) if current_user %>
+    
     
     
 <div class="jumbotron">
@@ -8,10 +8,19 @@
     
 </div>
 
+
+
 <div class="sign-up-buttons">
-     <%=link_to "Sign Up", "#", class: "btn btn-lg btn-primary" %>
-     <%=link_to "Log In", "#", class: "btn btn-lg btn-success" %>
+    <% if current_user %>
+
+<%= link_to "Visit Communty", users_path, class: 'btn btn-default btn-lg btn-block' %>
+
+<% else %>
+    
+     <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+     <%=link_to "Log In", new_user_session_path, class: "btn btn-lg btn-success" %>
 </div>
 
+<% end %>
 
 </div>
